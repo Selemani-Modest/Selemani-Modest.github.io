@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <!-- ============================================================
+       SEO — Selemani Modest | Cybersecurity & AI Portfolio
+       ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Selemani Modest | Offensive & Defensive Cybersecurity | AI Automation</title>
+
+  <meta name="description" content="Selemani Modest — Cybersecurity professional and Software Engineer specializing in offensive & defensive security, ethical hacking, secure network engineering, and AI automation. Student at Dar es Salaam Institute of Technology (DIT)." />
+  <meta name="keywords" content="Selemani Modest, Cybersecurity, AI, Pentesting, Blue Team, Networking, DIT, Ethical Hacking, Metasploit, Nmap, Threat Detection, Python, Dar es Salaam Institute of Technology" />
+  <meta name="author" content="Selemani Modest" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0f1e" />
+  <link rel="canonical" href="https://selemani-modest.github.io/" />
+
+  <!-- Open Graph (Facebook / WhatsApp / LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Selemani Modest | Offensive & Defensive Cybersecurity | AI Automation" />
+  <meta property="og:description" content="Cybersecurity & AI portfolio of Selemani Modest — Pentesting, Blue Teaming, Secure Networking and AI-driven security automation." />
+  <meta property="og:url" content="https://selemani-modest.github.io/" />
+  <meta property="og:site_name" content="Selemani Modest — Cybersecurity Portfolio" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Selemani Modest | Cybersecurity & AI Automation" />
+  <meta name="twitter:description" content="Offensive & defensive security, secure network engineering and AI automation by Selemani Modest." />
+
+  <!-- Structured Data: Person (Google rich results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Selemani Modest",
+    "url": "https://selemani-modest.github.io/",
+    "jobTitle": "Cybersecurity Professional & Software Engineer",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Dar es Salaam Institute of Technology (DIT)"
+    },
+    "knowsAbout": [
+      "Cybersecurity",
+      "Penetration Testing",
+      "Ethical Hacking",
+      "Blue Teaming",
+      "Threat Detection",
+      "Network Security",
+      "Artificial Intelligence",
+      "Python Automation"
+    ],
+    "sameAs": [
+      "https://github.com/Selemani-Modest",
+      "https://www.linkedin.com/in/selemani-modest/"
+    ]
+  }
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: "#070b14",
+            panel: "#0b1120",
+            neon: "#22d3ee",
+            accent: "#818cf8",
+            danger: "#f43f5e",
+          },
+          fontFamily: {
+            mono: ['"JetBrains Mono"', "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- FontAwesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    ::selection { background: #22d3ee; color: #070b14; }
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+    .glow-text { text-shadow: 0 0 28px rgba(34, 211, 238, 0.45); }
+    .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      border-color: rgba(34, 211, 238, 0.5);
+      box-shadow: 0 12px 40px -12px rgba(34, 211, 238, 0.25);
+    }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    .cursor-blink { animation: blink 1s step-end infinite; }
+  </style>
+</head>
+
+<body class="bg-midnight text-slate-300 font-mono antialiased">
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-midnight/80 backdrop-blur-md border-b border-cyan-400/10">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 py-4">
+      <a href="#home" class="text-lg font-bold text-cyan-300 tracking-tight">
+        <i class="fa-solid fa-terminal mr-2"></i>SM<span class="text-slate-500">_</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#about" class="hover:text-cyan-300 transition">About</a>
+        <a href="#skills" class="hover:text-cyan-300 transition">Skills</a>
+        <a href="#projects" class="hover:text-cyan-300 transition">Projects</a>
+        <a href="#contact" class="hover:text-cyan-300 transition">Contact</a>
+      </div>
+      <div class="hidden md:flex items-center gap-4">
+        <a href="https://github.com/Selemani-Modest" target="_blank" rel="noopener" aria-label="GitHub profile"
+           class="text-slate-400 hover:text-white transition text-lg"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/selemani-modest/" target="_blank" rel="noopener" aria-label="LinkedIn profile"
+           class="text-slate-400 hover:text-white transition text-lg"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+      <button id="menu-btn" class="md:hidden text-cyan-300 text-xl" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden px-5 pb-4 flex flex-col gap-3 text-sm border-t border-cyan-400/10">
+      <a href="#about" class="hover:text-cyan-300 transition">About</a>
+      <a href="#skills" class="hover:text-cyan-300 transition">Skills</a>
+      <a href="#projects" class="hover:text-cyan-300 transition">Projects</a>
+      <a href="#contact" class="hover:text-cyan-300 transition">Contact</a>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="home" class="relative min-h-screen grid-bg flex items-center justify-center overflow-hidden pt-20">
+    <div class="absolute inset-0 bg-gradient-to-b from-midnight/40 via-transparent to-midnight pointer-events-none"></div>
+    <div class="relative max-w-5xl mx-auto px-5 text-center">
+      <p class="text-cyan-400 tracking-[0.35em] text-xs md:text-sm uppercase mb-6">
+        <i class="fa-solid fa-shield-halved mr-2"></i>Defensive · Offensive · Automation
+      </p>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-white glow-text">
+        Selemani Modest
+      </h1>
+      <h2 class="mt-3 text-lg md:text-2xl text-cyan-300 font-semibold">
+        Offensive &amp; Defensive Cybersecurity <span class="text-slate-500">|</span> AI Automation
+      </h2>
+      <p class="mt-6 max-w-2xl mx-auto text-slate-400 text-sm md:text-base leading-relaxed">
+        Ethical hacker, secure network engineer and AI tinkerer. I break systems
+        <span class="text-rose-400">(with permission)</span> to understand them,
+        defend them, and automate the boring parts with Python &amp; LLMs.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        <a href="#projects"
+           class="px-6 py-3 rounded-lg bg-cyan-400 text-midnight font-bold hover:bg-cyan-300 transition shadow-lg shadow-cyan-400/20">
+          <i class="fa-solid fa-folder-open mr-2"></i>View Projects
+        </a>
+        <a href="https://github.com/Selemani-Modest" target="_blank" rel="noopener"
+           class="px-6 py-3 rounded-lg border border-cyan-400/40 text-cyan-300 font-bold hover:bg-cyan-400/10 transition">
+          <i class="fa-brands fa-github mr-2"></i>GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/selemani-modest/" target="_blank" rel="noopener"
+           class="px-6 py-3 rounded-lg border border-slate-600/60 text-slate-300 font-bold hover:border-indigo-400 hover:text-indigo-300 transition">
+          <i class="fa-brands fa-linkedin-in mr-2"></i>LinkedIn
+        </a>
+      </div>
+      <p class="mt-10 text-xs text-slate-500">
+        <span class="text-emerald-400">●</span> Available for security research &amp; collaboration
+      </p>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-cyan-400/60 animate-bounce">
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="py-24 bg-panel border-y border-cyan-400/10">
+    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <p class="text-cyan-400 text-sm tracking-widest uppercase mb-3">whoami</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">About Me</h2>
+        <p class="text-slate-400 leading-relaxed mb-4">
+          I am <strong class="text-cyan-300">Selemani Modest</strong>, a Cybersecurity enthusiast and
+          Software Engineer from Tanzania. I am currently pursuing my studies at the
+          <strong class="text-white">Dar es Salaam Institute of Technology (DIT)</strong>, where I focus on
+          Computer Engineering and the foundations of secure systems.
+        </p>
+        <p class="text-slate-400 leading-relaxed mb-4">
+          My passion sits at the intersection of
+          <strong class="text-white">secure network engineering</strong> and
+          <strong class="text-white">ethical hacking</strong>. I enjoy mapping attack surfaces as much as I
+          enjoy building defenses — and I love using AI to make both faster and smarter.
+        </p>
+        <p class="text-slate-400 leading-relaxed">
+          When I'm not in a terminal, I'm sharpening my skills on platforms like
+          TryHackMe and HackTheBox, and writing clean Python to automate security workflows.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3 text-xs">
+          <span class="px-3 py-1.5 rounded-full border border-cyan-400/30 text-cyan-300"><i class="fa-solid fa-graduation-cap mr-1.5"></i>DIT — Dar es Salaam Institute of Technology</span>
+          <span class="px-3 py-1.5 rounded-full border border-emerald-400/30 text-emerald-300"><i class="fa-solid fa-user-shield mr-1.5"></i>Ethical Hacking</span>
+          <span class="px-3 py-1.5 rounded-full border border-indigo-400/30 text-indigo-300"><i class="fa-solid fa-network-wired mr-1.5"></i>Secure Network Engineering</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="rounded-xl border border-cyan-400/20 bg-midnight overflow-hidden shadow-2xl shadow-cyan-400/5">
+          <div class="flex items-center gap-2 px-4 py-3 border-b border-cyan-400/10 bg-slate-900/60">
+            <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+            <span class="ml-3 text-xs text-slate-500">selemani@dit:~$</span>
+          </div>
+          <div class="p-5 text-sm leading-7">
+            <p class="text-slate-500"># whoami</p>
+            <p class="text-white mb-3">Selemani Modest — Cybersecurity &amp; AI Engineer</p>
+            <p class="text-slate-500"># cat /etc/passions</p>
+            <p class="text-cyan-300 mb-1"><i class="fa-solid fa-crosshairs mr-2"></i>pentesting &amp; web app assessments</p>
+            <p class="text-emerald-300 mb-1"><i class="fa-solid fa-shield-halved mr-2"></i>blue teaming &amp; threat detection</p>
+            <p class="text-indigo-300 mb-1"><i class="fa-solid fa-network-wired mr-2"></i>routing, switching &amp; secure architecture</p>
+            <p class="text-amber-300 mb-3"><i class="fa-solid fa-robot mr-2"></i>python + LLMs for security automation</p>
+            <p class="text-slate-500"># uptime</p>
+            <p class="text-slate-300">always learning<span class="cursor-blink text-cyan-300">▊</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="py-24">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-14">
+        <p class="text-cyan-400 text-sm tracking-widest uppercase mb-3">cat skills.json</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Technical Skills</h2>
+        <p class="mt-4 text-slate-400 max-w-2xl mx-auto">
+          A balanced arsenal across the full security spectrum — offense, defense, infrastructure and automation.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        <!-- Offensive Security -->
+        <article class="reveal card-hover rounded-xl border border-rose-400/20 bg-panel p-7">
+          <div class="flex items-center gap-4 mb-5">
+            <span class="w-12 h-12 rounded-lg bg-rose-400/10 border border-rose-400/30 flex items-center justify-center text-rose-400 text-xl">
+              <i class="fa-solid fa-crosshairs"></i>
+            </span>
+            <h3 class="text-xl font-bold text-white">Offensive Security</h3>
+          </div>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><i class="fa-solid fa-angle-right text-rose-400 mr-2"></i>Penetration Testing</li>
+            <li><i class="fa-solid fa-angle-right text-rose-400 mr-2"></i>Metasploit Framework</li>
+            <li><i class="fa-solid fa-angle-right text-rose-400 mr-2"></i>Nmap &amp; Network Reconnaissance</li>
+            <li><i class="fa-solid fa-angle-right text-rose-400 mr-2"></i>Web Application Security Assessments</li>
+          </ul>
+        </article>
+
+        <!-- Defensive Security -->
+        <article class="reveal card-hover rounded-xl border border-emerald-400/20 bg-panel p-7">
+          <div class="flex items-center gap-4 mb-5">
+            <span class="w-12 h-12 rounded-lg bg-emerald-400/10 border border-emerald-400/30 flex items-center justify-center text-emerald-400 text-xl">
+              <i class="fa-solid fa-shield-halved"></i>
+            </span>
+            <h3 class="text-xl font-bold text-white">Defensive Security</h3>
+          </div>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><i class="fa-solid fa-angle-right text-emerald-400 mr-2"></i>Blue Teaming</li>
+            <li><i class="fa-solid fa-angle-right text-emerald-400 mr-2"></i>Log Analysis &amp; SIEM Concepts</li>
+            <li><i class="fa-solid fa-angle-right text-emerald-400 mr-2"></i>Threat Detection &amp; Incident Response</li>
+            <li><i class="fa-solid fa-angle-right text-emerald-400 mr-2"></i>Hardening &amp; Monitoring</li>
+          </ul>
+        </article>
+
+        <!-- Networking & Infrastructure -->
+        <article class="reveal card-hover rounded-xl border border-indigo-400/20 bg-panel p-7">
+          <div class="flex items-center gap-4 mb-5">
+            <span class="w-12 h-12 rounded-lg bg-indigo-400/10 border border-indigo-400/30 flex items-center justify-center text-indigo-400 text-xl">
+              <i class="fa-solid fa-network-wired"></i>
+            </span>
+            <h3 class="text-xl font-bold text-white">Networking &amp; Infrastructure</h3>
+          </div>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><i class="fa-solid fa-angle-right text-indigo-400 mr-2"></i>Routing &amp; Switching</li>
+            <li><i class="fa-solid fa-angle-right text-indigo-400 mr-2"></i>Secure Network Architecture</li>
+            <li><i class="fa-solid fa-angle-right text-indigo-400 mr-2"></i>Firewalls &amp; Network Segmentation</li>
+            <li><i class="fa-solid fa-angle-right text-indigo-400 mr-2"></i>TCP/IP, DNS &amp; Traffic Analysis</li>
+          </ul>
+        </article>
+
+        <!-- AI & Automation -->
+        <article class="reveal card-hover rounded-xl border border-amber-400/20 bg-panel p-7">
+          <div class="flex items-center gap-4 mb-5">
+            <span class="w-12 h-12 rounded-lg bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400 text-xl">
+              <i class="fa-solid fa-robot"></i>
+            </span>
+            <h3 class="text-xl font-bold text-white">AI &amp; Automation</h3>
+          </div>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><i class="fa-solid fa-angle-right text-amber-400 mr-2"></i>Python Scripting for Security</li>
+            <li><i class="fa-solid fa-angle-right text-amber-400 mr-2"></i>Automating Security Tasks with LLMs</li>
+            <li><i class="fa-solid fa-angle-right text-amber-400 mr-2"></i>Custom Tooling &amp; Workflow Automation</li>
+            <li><i class="fa-solid fa-angle-right text-amber-400 mr-2"></i>Prompt Engineering for Analysis</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="py-24 bg-panel border-y border-cyan-400/10">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-14">
+        <p class="text-cyan-400 text-sm tracking-widest uppercase mb-3">ls ~/projects</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Projects</h2>
+        <p class="mt-4 text-slate-400 max-w-2xl mx-auto">
+          Hands-on tools and write-ups — built to learn, built to defend.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Custom Network Scanner -->
+        <article class="reveal card-hover rounded-xl border border-cyan-400/20 bg-midnight overflow-hidden flex flex-col">
+          <div class="h-1.5 bg-gradient-to-r from-cyan-400 to-indigo-500"></div>
+          <div class="p-7 flex flex-col flex-1">
+            <span class="w-12 h-12 rounded-lg bg-cyan-400/10 border border-cyan-400/30 flex items-center justify-center text-cyan-400 text-xl mb-5">
+              <i class="fa-solid fa-radar"></i>
+            </span>
+            <h3 class="text-lg font-bold text-white mb-3">Custom Network Scanner</h3>
+            <p class="text-sm text-slate-400 leading-relaxed flex-1">
+              A Python-powered network reconnaissance tool for host discovery, port scanning and
+              service fingerprinting — my take on lightweight, extensible network mapping.
+            </p>
+            <div class="mt-5 flex flex-wrap gap-2 text-[11px]">
+              <span class="px-2.5 py-1 rounded bg-cyan-400/10 text-cyan-300">Python</span>
+              <span class="px-2.5 py-1 rounded bg-cyan-400/10 text-cyan-300">Scapy</span>
+              <span class="px-2.5 py-1 rounded bg-cyan-400/10 text-cyan-300">Nmap</span>
+            </div>
+            <a href="https://github.com/Selemani-Modest" target="_blank" rel="noopener"
+               class="mt-6 inline-flex items-center gap-2 text-sm text-cyan-300 hover:text-cyan-200 transition">
+              <i class="fa-brands fa-github"></i> View on GitHub <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- AI Log Analyzer -->
+        <article class="reveal card-hover rounded-xl border border-amber-400/20 bg-midnight overflow-hidden flex flex-col">
+          <div class="h-1.5 bg-gradient-to-r from-amber-400 to-rose-500"></div>
+          <div class="p-7 flex flex-col flex-1">
+            <span class="w-12 h-12 rounded-lg bg-amber-400/10 border border-amber-400/30 flex items-center justify-center text-amber-400 text-xl mb-5">
+              <i class="fa-solid fa-brain"></i>
+            </span>
+            <h3 class="text-lg font-bold text-white mb-3">AI Log Analyzer</h3>
+            <p class="text-sm text-slate-400 leading-relaxed flex-1">
+              An LLM-assisted log analysis pipeline that ingests raw security logs, detects anomalies,
+              and summarizes threats in plain language — automating the SOC triage workflow.
+            </p>
+            <div class="mt-5 flex flex-wrap gap-2 text-[11px]">
+              <span class="px-2.5 py-1 rounded bg-amber-400/10 text-amber-300">Python</span>
+              <span class="px-2.5 py-1 rounded bg-amber-400/10 text-amber-300">LLMs</span>
+              <span class="px-2.5 py-1 rounded bg-amber-400/10 text-amber-300">Threat Detection</span>
+            </div>
+            <a href="https://github.com/Selemani-Modest" target="_blank" rel="noopener"
+               class="mt-6 inline-flex items-center gap-2 text-sm text-amber-300 hover:text-amber-200 transition">
+              <i class="fa-brands fa-github"></i> View on GitHub <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- CTF Write-ups -->
+        <article class="reveal card-hover rounded-xl border border-emerald-400/20 bg-midnight overflow-hidden flex flex-col">
+          <div class="h-1.5 bg-gradient-to-r from-emerald-400 to-cyan-500"></div>
+          <div class="p-7 flex flex-col flex-1">
+            <span class="w-12 h-12 rounded-lg bg-emerald-400/10 border border-emerald-400/30 flex items-center justify-center text-emerald-400 text-xl mb-5">
+              <i class="fa-solid fa-flag"></i>
+            </span>
+            <h3 class="text-lg font-bold text-white mb-3">TryHackMe &amp; HackTheBox Write-ups</h3>
+            <p class="text-sm text-slate-400 leading-relaxed flex-1">
+              A growing repository of detailed walkthroughs documenting my CTF journey — methodology,
+              tools and lessons learned from every machine rooted.
+            </p>
+            <div class="mt-5 flex flex-wrap gap-2 text-[11px]">
+              <span class="px-2.5 py-1 rounded bg-emerald-400/10 text-emerald-300">TryHackMe</span>
+              <span class="px-2.5 py-1 rounded bg-emerald-400/10 text-emerald-300">HackTheBox</span>
+              <span class="px-2.5 py-1 rounded bg-emerald-400/10 text-emerald-300">Write-ups</span>
+            </div>
+            <a href="https://github.com/Selemani-Modest" target="_blank" rel="noopener"
+               class="mt-6 inline-flex items-center gap-2 text-sm text-emerald-300 hover:text-emerald-200 transition">
+              <i class="fa-brands fa-github"></i> View on GitHub <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="py-24">
+    <div class="max-w-3xl mx-auto px-5 text-center">
+      <p class="text-cyan-400 text-sm tracking-widest uppercase mb-3">./contact</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Let's Connect</h2>
+      <p class="text-slate-400 mb-10 leading-relaxed">
+        Open to security research collaborations, CTF teammates, internships and interesting problems.
+        Reach me on GitHub or LinkedIn — my inbox is always open.
+      </p>
+      <div class="flex justify-center gap-5">
+        <a href="https://github.com/Selemani-Modest" target="_blank" rel="noopener"
+           class="w-14 h-14 rounded-xl border border-slate-600/60 flex items-center justify-center text-2xl text-slate-300 hover:border-cyan-400 hover:text-cyan-300 hover:-translate-y-1 transition"
+           aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/selemani-modest/" target="_blank" rel="noopener"
+           class="w-14 h-14 rounded-xl border border-slate-600/60 flex items-center justify-center text-2xl text-slate-300 hover:border-indigo-400 hover:text-indigo-300 hover:-translate-y-1 transition"
+           aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="py-10 bg-panel border-t border-cyan-400/10">
+    <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+      <p>
+        <i class="fa-solid fa-shield-halved text-cyan-400 mr-2"></i>
+        &copy; <span id="year"></span> <strong class="text-slate-300">Selemani Modest</strong> — Cybersecurity &amp; AI Automation
+      </p>
+      <div class="flex items-center gap-5">
+        <a href="https://github.com/Selemani-Modest" target="_blank" rel="noopener"
+           class="hover:text-cyan-300 transition"><i class="fa-brands fa-github mr-1.5"></i>GitHub</a>
+        <a href="https://www.linkedin.com/in/selemani-modest/" target="_blank" rel="noopener"
+           class="hover:text-indigo-300 transition"><i class="fa-brands fa-linkedin-in mr-1.5"></i>LinkedIn</a>
+      </div>
+    </div>
+    <p class="text-center text-[11px] text-slate-600 mt-4">
+      Built with <i class="fa-solid fa-heart text-rose-500"></i> by Selemani Modest · Dar es Salaam, Tanzania
+    </p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Scroll reveal animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
